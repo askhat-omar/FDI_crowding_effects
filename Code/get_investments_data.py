@@ -257,7 +257,7 @@ def main():
     
     # Generate timestamp for the report
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    report_filename = f"download_report_{timestamp}.txt"
+    report_filename = f"Investments_download_report_{timestamp}.txt"
     
     # Write comprehensive report to file
     with open(report_filename, 'w', encoding='utf-8') as report_file:

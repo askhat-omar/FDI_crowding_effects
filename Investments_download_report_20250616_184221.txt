@@ -1,0 +1,44 @@
+============================================================
+KAZAKHSTAN STATISTICS DOWNLOAD REPORT
+============================================================
+Report generated: 2025-06-16 18:42:21
+Investments directory: /Users/askhat/Documents/Research/FDI_crowding_effects/Data/Investments
+Excel source file: /Users/askhat/Documents/Research/FDI_crowding_effects/Data/Investments_sources.xlsx
+
+SUMMARY:
+------------------------------
+Successful downloads: 155
+Failed downloads: 22
+Total files processed: 177
+
+FAILED DOWNLOADS:
+------------------------------
+Total failures: 22
+
+Failed items (Oblast_Year format):
+ 1. Astana-city_2019
+ 2. Astana-city_2021
+ 3. Almaty-city_2024
+ 4. Shymkent-city_2021
+ 5. Shymkent-city_2023
+ 6. Almaty_2020
+ 7. Atyrau_2018
+ 8. Akmola_2014
+ 9. Akmola_2018
+10. Akmola_2021
+11. West-Kazakhstan_2017
+12. West-Kazakhstan_2021
+13. East-Kazakhstan_2023
+14. Zhambyl_2020
+15. Kostanay_2023
+16. Kyzylorda_2021
+17. Mangystau_2018
+18. Mangystau_2020
+19. North-Kazakhstan_2016
+20. Pavlodar_2016
+21. Pavlodar_2018
+22. Pavlodar_2021
+
+============================================================
+END OF REPORT
+============================================================
