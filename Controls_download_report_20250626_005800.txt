@@ -1,0 +1,28 @@
+============================================================
+CONTROLS DATA DOWNLOAD REPORT
+============================================================
+Report generated: 2025-06-26 00:58:00
+Controls directory: /Users/askhat/Documents/Research/FDI_crowding_effects/Data/Controls
+Excel source file: /Users/askhat/Documents/Research/FDI_crowding_effects/Data/Other_controls_sources.xlsx
+
+SUMMARY:
+------------------------------
+Successful downloads: 19
+Failed downloads: 6
+Total files processed: 25
+
+FAILED DOWNLOADS:
+------------------------------
+Total failures: 6
+
+Failed Oblast - Type combinations:
+ 1. Aktobe - All
+ 2. Akmola - All
+ 3. East-Kazakhstan - All
+ 4. Karagandy - All
+ 5. Mangystau - All
+ 6. Ulytau - All
+
+============================================================
+END OF REPORT
+============================================================
