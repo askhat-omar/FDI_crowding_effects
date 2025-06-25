@@ -1,0 +1,23 @@
+============================================================
+EMPLOYMENT DATA DOWNLOAD REPORT
+============================================================
+Report generated: 2025-06-26 00:22:20
+Employment directory: /Users/askhat/Documents/Research/FDI_crowding_effects/Data/Employment
+Excel source file: /Users/askhat/Documents/Research/FDI_crowding_effects/Data/Employment_sources.xlsx
+
+SUMMARY:
+------------------------------
+Successful downloads: 19
+Failed downloads: 1
+Total files processed: 20
+
+FAILED DOWNLOADS:
+------------------------------
+Total failures: 1
+
+Failed oblasts:
+ 1. Karagandy
+
+============================================================
+END OF REPORT
+============================================================
