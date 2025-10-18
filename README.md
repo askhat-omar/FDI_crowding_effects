@@ -34,7 +34,12 @@ jupyter lab
 
 Open `data_cleaning.ipynb` in the `Code` folder. If `Jupyter` asks to specify `Python` kernel, choose `fdi_crowding`.
 
-In order to continue and finalize the data cleaning process, it is suggested to take code for Aktobe oblast as a reference.
+In order to continue and finalize the data cleaning process, it is suggested to take code for Aktobe oblast as a reference. The structure of the code remains the same, one needs only to change certain arguments in the `pd.read_excel()` function:
+1. File names in the `Path`
+2. `sheet_name` for specifying which sheet of the Excel file to read
+3. `header` for specifying header row
+4. `nrows` to specify how many rows to use
+5. `usecols` to specify which columns to read
 
 ## File overview
 
