@@ -34,6 +34,8 @@ jupyter lab
 
 Open `data_cleaning.ipynb` in the `Code` folder. If `Jupyter` asks to specify `Python` kernel, choose `fdi_crowding`.
 
+In order to continue and finalize the data cleaning process, it is suggested to take code for Aktobe oblast as a reference.
+
 ## File overview
 
 | Folder | Subfolder | File | Type | Description |
