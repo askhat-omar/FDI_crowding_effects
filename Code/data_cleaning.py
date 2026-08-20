@@ -1108,6 +1108,11 @@ def process_almaty_city():
     retail_df = pd.read_excel(Path("../Data/Controls/Almaty-city_Retail.xlsx"), sheet_name='торговля', skiprows=3, nrows=8, usecols='A, Z:AI', na_values=NA_VALS, header=None).fillna(0)
     retail_df.columns = ['rayon'] + list(range(2014, 2024))
     retail_df['rayon'] = retail_df['rayon'].astype(str).str.strip().replace(rayon_map_alm_city)
+    # The source workbook stores the 2017 and 2018 columns as text with comma
+    # decimal separators (e.g. '198,7'); clean_col converts them to floats so
+    # they don't end up as strings in clean_data.csv.
+    for yr in range(2014, 2024):
+        retail_df[yr] = clean_col(retail_df[yr])
     retail_long = retail_df.melt(id_vars='rayon', var_name='year', value_name='retail')
 
     alm_city_controls = outer_merge([agri_long, prod_long, retail_long])
@@ -2238,7 +2243,17 @@ def process_pavlodar():
 
     for df in [pav_non_2015, pav_non_2016, pav_non_2017, pav_non_2018, pav_non_2019, pav_non_2020, pav_non_2021, pav_non_2022, pav_non_2023, pav_non_2024]:
         df.columns = NON_COLS
-        df[['all_nonextr_inv', 'f_nonextr_inv']] = df[['all_nonextr_inv', 'f_nonextr_inv']].astype(str).replace('<NA>', '').apply(lambda x: x.str.replace(' ', '')).replace('', 0).astype(float)
+        # Convert to numeric robustly: dashes in the source PDFs were mapped to <NA>
+        # upstream; coerce anything non-numeric to NaN, then fill with 0.
+        # (The previous version string-matched the literal '<NA>', which broke
+        # silently under pandas >= 3.0 where NA no longer stringifies to '<NA>'.)
+        df[['all_nonextr_inv', 'f_nonextr_inv']] = (
+            df[['all_nonextr_inv', 'f_nonextr_inv']]
+            .apply(lambda s: pd.to_numeric(
+                s.astype(str).str.replace(' ', '', regex=False).str.replace('\xa0', '', regex=False),
+                errors='coerce'))
+            .fillna(0)
+        )
         df['l_nonextr_inv'] = df['all_nonextr_inv'] - df['f_nonextr_inv']
         df.drop('all_nonextr_inv', axis=1, inplace=True)
         df['rayon'] = df['rayon'].replace(rayon_map_pavlodar)
